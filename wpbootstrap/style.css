@@ -1,0 +1,1006 @@
+/*
+Theme Name: Project Wiz-Bang
+Theme URI: http://teamtreehouse.com/wordpress-bootstrap-theme-tutorial
+Description: A demo theme built to accompany the Treehouse blog post <a href="http://teamtreehouse.com/wordpress-bootstrap-theme-tutorial">How to Build a WordPress Theme with Bootstrap</a>.
+Author: (skeletal structure)Zac Gordon (heavily modified by David Sanchez)
+Author URI: http://teamtreehouse.com/
+Version: 1.0
+Tags: responsive, white, bootstrap
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html. I used Jack's blog to help me get started since I lacked a lot of PHP knowledge but then I modified it with my own aesthetics. - D.S.
+*/
+
+@import url('bootstrap/css/bootstrap.css');
+
+
+
+#logoContainer{
+   width: 8em;
+      height:auto;
+      display: inline;
+      float:left;
+      margin-left:2%;
+      opacity:0;
+}
+
+
+.nav-collapse .nav .page-item .btn-primary{
+  background-color:rgba(0, 0, 0, 0);
+  border-color:rgba(0, 0, 0, 0);
+  font-family: 'Oswald', sans-serif;
+  font-weight:300;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-top:2.5px;
+}
+
+.intro {
+ min-width:100%;
+ min-height:100%;
+ position:fixed;
+ top:50%;
+ left:50%;
+transform:translateX(-50%) translateY(-50%);
+height:auto;
+width:auto;
+background-color:#f39d1f;
+overflow:hidden;
+}
+
+.intro .logo{
+display:inline;
+margin:0 auto;
+float:left;
+z-index:1;
+min-width:90%;
+min-height:auto;
+max-width:950px;
+}
+
+
+.intro .logo img{
+  width:auto;
+  height:auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+
+}
+
+
+.container .hero-unit #wrapper{
+	width:100%;
+	height:100%;
+	position: fixed;
+	opacity: 1;
+}
+
+
+
+button{
+	box-shadow:none;
+    transform-origin: 50% 50%;
+}
+
+.reelContainer{
+	position:fixed;
+	width: 100%;
+	height: 100%;
+  opacity:0;
+	
+	
+}
+
+.reelContainer .row-fluid{
+  display: block;
+  padding: 6%;
+  margin-top:10%;
+  transform-origin: 50% 50%;
+}
+
+
+.reelContainer .row-fluid .btn-outline-primary{
+  padding: 1em 2em;
+  margin-top:-10%;
+  float: left;
+}
+
+
+.bgReel{
+  height:100%;
+  width:100%;
+  margin:0 auto;
+  display: block;
+  transform-origin: 50% 50%;
+  top:50%;
+  left:50%;
+  height:50%;
+  position:fixed;
+  min-width:100%;
+  min-height:100%;
+  transform:translateX(-50%) translateY(-50%);
+    z-index:-1;
+
+}
+
+#bgvid{
+  opacity:1;
+  visibility:visible;
+}
+
+#buttonvid{
+ opacity:0;
+}
+
+
+
+#buttonvid button.close{
+  position: relative;
+  z-index:5;
+  display:inline;
+  margin-right:2em;
+  margin-top:4em;
+  max-height: 10%; 
+  max-width:10%;
+  float: right;
+}
+
+
+.svg-inline--fa.fa-w-16{
+  height:auto;
+  width:3em;
+  color:#fff;
+}
+
+audio, canvas, video{
+  position: absolute;
+}
+
+#wrapper{
+	visibility:hidden;
+}
+
+#fpText{
+	opacity: 0;
+  max-width:60%;
+  margin:0 auto;
+  position: relative;
+
+}
+
+
+#fpText h3{
+line-height: 1em;
+
+}
+
+#fpButton{
+  opacity: 0;
+}
+
+ 
+
+h2{
+  font-size:1.5em;
+  text-transform:uppercase;
+  text-decoration:underline;
+}
+
+p{
+}
+
+  figure{
+    padding:0;
+    margin:0;
+  }
+
+  .card .btn{
+  color:#fff;
+  border: 2px solid #fff;
+  border-radius: 5%;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0) ;
+}
+
+.hero-unit h1 p {
+ font-size:1.75em;
+  text-transform: none;
+  color:#fff;
+  letter-spacing: 2px;
+  line-height: .8em;
+
+
+}
+
+
+
+.container #wrapperPages{
+	width:100%;
+	height:100%;
+	position: absolute;
+	opacity: 1;
+
+}
+
+.container-fluid img{
+	padding:0;
+	margin: 0;
+	width: 100%;
+	height: auto;
+position: absolute;
+
+}
+
+
+
+.container #pageContent{
+	height:auto;
+margin-bottom:5em;
+
+}
+
+.galleryWrapper{
+	width:100%;
+	height:100%;
+display: block;
+background: rgba(209,131,15,1);
+background: -moz-linear-gradient(left, rgba(209,131,15,1) 0%, rgba(243,158,31,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(209,131,15,1)), color-stop(100%, rgba(243,158,31,1)));
+background: -webkit-linear-gradient(left, rgba(209,131,15,1) 0%, rgba(243,158,31,1) 100%);
+background: -o-linear-gradient(left, rgba(209,131,15,1) 0%, rgba(243,158,31,1) 100%);
+background: -ms-linear-gradient(left, rgba(209,131,15,1) 0%, rgba(243,158,31,1) 100%);
+background: linear-gradient(to right, rgba(209,131,15,1) 0%, rgba(243,158,31,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1830f', endColorstr='#f39e1f', GradientType=1 );
+    position:relative;
+}
+
+
+
+
+.galleryWrapper:before{
+  content:'';
+  background-image:url('http://localhost/wp-content/uploads/2017/09/bgPattern2.svg');
+display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+.brandWrapper{
+  width:100%;
+  height:100%;
+display: block;
+background: rgba(121,157,181,1);
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f39d1f+50,f39d1f+50,88420e+100 */
+background: rgb(243,157,31); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgb(243,157,31) 50%, rgb(243,157,31) 50%, rgb(136,66,14) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  rgb(243,157,31) 50%,rgb(243,157,31) 50%,rgb(136,66,14) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  rgb(243,157,31) 50%,rgb(243,157,31) 50%,rgb(136,66,14) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f39d1f', endColorstr='#88420e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    position:relative;
+
+}
+
+
+.brandWrapperTwo{
+  width:100%;
+  height:100%;
+display: block;
+background: rgba(121,157,181,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(121,157,181,1) 0%, rgba(53,73,86,1) 89%, rgba(53,73,86,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(121,157,181,1)), color-stop(89%, rgba(53,73,86,1)), color-stop(100%, rgba(53,73,86,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(121,157,181,1) 0%, rgba(53,73,86,1) 89%, rgba(53,73,86,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(121,157,181,1) 0%, rgba(53,73,86,1) 89%, rgba(53,73,86,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(121,157,181,1) 0%, rgba(53,73,86,1) 89%, rgba(53,73,86,1) 100%);
+background: radial-gradient(ellipse at center, rgba(121,157,181,1) 0%, rgba(53,73,86,1) 89%, rgba(53,73,86,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#799db5', endColorstr='#354956', GradientType=1 );
+    position:relative;
+
+}
+
+.brandWrapper:before{
+  content:'';
+display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+      background-image:url('http://localhost/wp-content/uploads/2017/09/bgPattern2.svg');
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.brandWrapper .row-fluid .container{
+  width:50%;
+  display:inline-block;
+  float: left;
+}
+
+.jumbotron{
+  padding:8%;
+}
+
+
+.jumbotron .row{
+  padding:5% 0 20% 5%;
+  height:auto;
+  width:auto;
+
+}
+
+
+.jumbotron .row .card{
+  position:relative;
+}
+
+#work{
+  content:'';
+  background-image:url('http://localhost/wp-content/uploads/2017/09/workBG.jpg');
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+
+
+#brand{
+  content:'';
+  background-image:url('http://localhost/wp-content/uploads/2018/02/Brand-Tim.jpg');
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+
+#pr{
+  content:'';
+  background-image:url('http://localhost/wp-content/uploads/2017/11/prBG.jpg');
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+
+#media{
+  content:'';
+  background-image:url('http://localhost/wp-content/uploads/2017/10/mediaBG.jpg');
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+#crmBG{
+  background-image:url('http://localhost/wp-content/uploads/2017/10/CRMsubhead_V2.jpg');
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+#prgbuyBG{
+  background-image:url('http://localhost/wp-content/uploads/2017/10/ProgramaticBuying_v2.jpg');
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+  
+}
+
+#people{
+  content:'';
+  background-image:url('http://localhost/wp-content/uploads/2017/11/People.jpg');
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+
+
+
+.galleryWrapper .row-fluid{
+  padding:8% 0%;
+}
+
+.galleryContainer{
+	margin:0 auto;
+ -webkit-box-shadow: -5px -5px 8px rgba(0, 0, 0, .5);
+     -moz-box-shadow: -5px -5px 8px rgba(0, 0, 0, .5);
+          box-shadow: -5px -5px 8px rgba(0, 0, 0, .5);
+          position:relative;
+          display:block;
+          border-width: .2rem;
+          width:75%;
+          height: auto;
+}
+
+.galleryContainer .card{
+  -webkit-box-shadow: -5px -5px 8px rgba(0, 0, 0, .5);
+     -moz-box-shadow: -5px -5px 8px rgba(0, 0, 0, .5);
+          box-shadow: -5px -5px 8px rgba(0, 0, 0, .5);
+  width:20rem;
+  height:30rem;
+  position: absolute;
+  z-index:1;
+  top:3rem;
+  left:-3rem;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+.carousel-item {
+  position: relative;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform: translateY(-1000);
+  transform: translateY(-1000);
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: block;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
+  .carousel-item-next.carousel-item-left,
+  .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.carousel-item-next,
+.active.carousel-item-right {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
+  .carousel-item-next,
+  .active.carousel-item-right {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.carousel-item-prev,
+.active.carousel-item-left {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
+  .carousel-item-prev,
+  .active.carousel-item-left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 15%;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.carousel-control-prev:focus, .carousel-control-prev:hover,
+.carousel-control-next:focus,
+.carousel-control-next:hover {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: .9;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  z-index: 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+}
+
+.carousel-indicators li {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-indicators li::before {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  content: "";
+}
+
+.carousel-indicators li::after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  content: "";
+}
+
+.carousel-indicators .active {
+  background-color: #fff;
+}
+
+.carousel-caption {
+  padding:1.5rem;
+  text-align: left;
+}
+
+.carousel-caption h1{
+  font-size:2.2rem;
+  line-height:2.3rem;
+  border-bottom: 5px solid currentColor;
+  height:auto;
+  width:80%;
+  word-wrap: break-word;
+  padding-bottom:.35em;
+}
+
+.carousel-caption p{
+  font-size:1.05rem;
+  line-height:1.4rem;
+  height:auto;
+  width:80%;
+  word-wrap: break-word;
+  text-align:left;
+  margin:0;
+}
+
+
+
+
+.card .titleLine{
+	 width:95%;
+  word-wrap: break-word;
+  text-align:left;
+  margin-bottom:1.1rem;
+     border-bottom: 5px solid #fff;
+     padding:.25rem;
+
+}
+
+
+
+.card-body{
+	color:#fff;
+	padding:1.5rem;
+	font-weight: lighter;
+  height:100%;
+  display:inline;
+  height:67%;
+}
+
+.card-body .card-title{
+	text-align:left;
+	font-size: 4rem;
+	line-height: 4rem;
+	font-weight: lighter;
+	letter-spacing: 2px;
+
+}
+
+.card-body .card-text{
+	font-size:.5rem;
+	line-height: 2rem;
+	font-weight: lighter;
+	letter-spacing: 2px;
+  text-align:left;
+
+}
+
+
+.indicatorContainer {
+	background-color:rgba(0, 0, 0, .6);
+	width:15rem;
+	height:4.5rem;
+	margin:0 auto;
+	transform-style: preserve-3d;
+    transform:translate3d(0px, 60px, 0px);
+    position: relative;
+}
+
+
+
+#testimonialsBG{
+  background-color:#fff;
+  display:block;
+  height:auto;
+  width:100%;
+}
+
+
+
+figure .img-fluid{
+  width:50%;
+  height: auto;
+}
+
+.bgWhite{
+  background-color:#fff;
+
+}
+
+
+.bgTransparent{
+background-color:none;
+overflow: hidden;
+height: auto;
+width:auto;
+  position: relative;
+
+}
+
+
+
+.bgTransparent:after{
+   content:'';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    opacity: 0.1;
+      background-image:url('http://localhost/wp-content/uploads/2017/09/bgPattern2.svg');
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+
+.bgOrange{
+  background-color:#f39d1f;
+
+}
+
+#buttonFooter {
+     opacity: 0.1;
+      background-image:url('http://localhost/wp-content/uploads/2017/09/bgPattern2.svg');
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+.bgWhite .col-md-4 h2 {
+  color: #163449;
+  text-align: left;
+  font-size:2.25em;
+  line-height: 1.9em;
+  font-weight:lighter;
+  border-bottom: 3px solid #163449;
+  text-decoration:none;
+  width:92%;
+  margin-top:1.3em;
+}
+
+.bgWhite .col-md-4 p {
+  color: #163449;
+  text-align: left;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  letter-spacing:-0.15px;
+}
+
+.bgTransparent .col-md-4 h2 {
+  color: #fff;
+  text-align: left;
+  font-size:2.25em;
+  line-height: 1.9em;
+  font-weight:lighter;
+  border-bottom: 3px solid #fff;
+  text-decoration:none;
+  width:92%;
+  margin-top:1.3em;
+
+}
+
+.bgTransparent .col-md-4 p {
+  color: #fff;
+  text-align: left;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  letter-spacing:-0.15px;
+}
+
+.brandWrapperTwo .bgOrange {
+  text-align:center;
+  width:100%;
+  height:15%;
+  display: block;
+  position:absolute;
+      vertical-align: middle;
+      text-align:center;
+      padding-top:3%;
+}
+footer{
+    background-color:#f39d1f;
+    height:10rem;
+
+}
+
+footer .container{
+padding-top:2.8rem;
+}
+
+footer .container button{
+  padding: .75em 1.5em;
+  font-size:2em;
+  text-transform: uppercase;
+  text-shadow: none;
+  margin: 0 auto;
+  display:inline-block;
+}
+
+.btn-outline-primary {
+  color: #fff;
+  background-color: transparent;
+  background-image: transparent;
+  border: 2.5px solid  #fff;
+  padding:2% 4%;
+  font-size:2em;
+  overflow: hidden;
+}
+
+.btn-outline-primary:hover {
+
+  background-color: transparent;
+    background-image: transparent;
+
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: rgba(255, 255, 255, 1);   
+  background-color: transparent;
+}
+
+.btn-outline-primary:active, .btn-outline-primary.active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: rgba(255, 255, 255, 1);   
+  background-color: transparent;
+  background-image: transparent;
+}
+
+.jumbotron .card{
+  width:25rem;
+  -webkit-box-shadow: -4px -5px 8px rgba(0, 0, 0, .5);
+     -moz-box-shadow: -4px -5px 8px rgba(0, 0, 0, .5);
+          box-shadow: -4px -5px 8px rgba(0, 0, 0, .5);
+
+}
+
+.jumbotron .card h1{
+  font-size:4rem;
+  line-height: 1em;
+
+}
+
+.jumbotron .card h3{
+  font-size:2.25em;
+  line-height: 1.15em;
+
+}
+
+.jumbotron .card p{
+  font-size:1.25rem;
+  line-height: 1.6rem;
+  padding:.1rem;
+
+}
+
+  .row-fluid{
+    padding:0;
+  }
+
+
+
+.peopleRow .card{
+  width: 21em;
+  height: 25em;
+  z-index:1;
+display:inline-block;
+  position:absolute;
+  padding:.75rem;
+
+}
+
+.peopleRow{
+overflow: hidden;
+  display:inline-block;
+
+}
+.peopleRow .col-md-6{
+  max-width:40%;
+  height: 26rem;
+  margin:0 1rem 0 1rem;
+  padding-top:4rem;
+
+}
+
+.peopleRow figure{
+  width:375px;
+  height:auto;
+  top:19px;
+  margin:0 0 0 18rem;
+  -webkit-box-shadow: -4px -5px 8px rgba(0, 0, 0, .5);
+     -moz-box-shadow: -4px -5px 8px rgba(0, 0, 0, .5);
+          box-shadow: -4px -5px 8px rgba(0, 0, 0, .5);
+}
+
+
+.peopleRow .card .card-title{
+  font-size:3em;
+  line-height: 1.1em;
+
+}
+
+.peopleRow .card .card-subtitle{
+  font-size:1.5em;
+  line-height: 1.15em;
+  text-align:left;
+  font-weight:lighter;
+  text-tranform:none;
+
+}
+
+.peopleRow .card .card-text{
+  font-size:1em;
+  line-height: 1.35em;
+
+}
+
+.footerButton{
+  background-color:#f39d1f;
+  
+}
+ .show{
+display: block;
+  opacity: 1;
+  top:0;
+
+}
+
